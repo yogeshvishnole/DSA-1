@@ -33,8 +33,8 @@ int main()
     // b = a - b;
     // a = a - b;
 
-    // Using xor operator
-    // a = a ^ b;
+    // Using xor operator -> true only when exactly one of the operands is true
+    // a = a ^ b;  
     // b = a ^ b;
     // a = a ^ b;
 
