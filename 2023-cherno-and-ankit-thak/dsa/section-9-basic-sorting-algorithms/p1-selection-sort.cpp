@@ -48,7 +48,7 @@ void selectionSort(vector<int> &v)
     for (int i = 1; i < v.size(); i++)
     {
         int smallest = findSmallest(v, i, v.size() - 1);
-        if (v[i - 1] > smallest)
+        if (v[i - 1] > v[smallest])
         {
             swap(v[smallest], v[i - 1]);
         }
@@ -66,7 +66,7 @@ void printVector(vector<int> &v)
 
 int main()
 {
-    vector<int> v{7, 5, 3, 6, 8};
+    vector<int> v{8, 5, 3, 6, 8};
     cout << "Before sorting: " << endl;
     printVector(v);
     selectionSort(v);
