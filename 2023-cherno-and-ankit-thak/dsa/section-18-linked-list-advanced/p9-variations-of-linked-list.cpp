@@ -1,3 +1,5 @@
+// NOTE - I have to implement them all when I get time.
+
 /*
 There are several variations of linked lists, each with its own advantages and disadvantages depending on the use case. Below is a comprehensive list of linked list types, along with their pros and cons:
 
