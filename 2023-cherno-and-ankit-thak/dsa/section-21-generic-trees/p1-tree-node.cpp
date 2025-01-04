@@ -9,8 +9,15 @@ linked list - we have to traverse the complete list to reach to a child.
 vector or dyanamic queue provides idefinite size and random acces with the help
 of which we can access any number childe in O(1)
 
- */
+Deleting tree via destructor -
+It is interesting for this you should well aware about the working
+of delete keyword, what delete keyword do is first call the destructor
+execute its code and then delete the object, so when we delete root
+then in its destructor we will delete its childs and then the parent/root
+itself will be deleted in recursive post order manner.
 
+ */
+#pragma once
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -25,6 +32,14 @@ public:
     TreeNode(T data)
     {
         this->data = data;
+    }
+
+    ~TreeNode()
+    {
+        for (int i = 0; i < this->children.size(); i++)
+        {
+            delete this->children[i];
+        }
     }
 };
 

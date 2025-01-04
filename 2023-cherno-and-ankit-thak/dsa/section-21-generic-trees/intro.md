@@ -3,7 +3,6 @@
 A **tree** is a hierarchical data structure consisting of nodes, where each node has a value and pointers to its child nodes. It is used to organize data efficiently for retrieval, insertion, and deletion.
 
 ---
-
 ## Why Trees Are Needed
 1. **Hierarchical Data Representation**: Useful for representing hierarchical relationships, such as file systems or organizational charts.
 2. **Faster Operations**: Enables efficient searching, insertion, and deletion (e.g., O(log n) in a balanced binary search tree).

@@ -11,7 +11,7 @@ parent:children
 ....
 
  */
-
+#pragma once
 #include <iostream>
 #include "p1-tree-node.cpp"
 using namespace std;
@@ -43,14 +43,14 @@ void printTree(TreeNode<T> *root)
     }
 }
 
-int main()
-{
-    TreeNode<int> *root = new TreeNode<int>(1);
-    TreeNode<int> *n1 = new TreeNode<int>(2);
-    TreeNode<int> *n2 = new TreeNode<int>(3);
+// int main()
+// {
+//     TreeNode<int> *root = new TreeNode<int>(1);
+//     TreeNode<int> *n1 = new TreeNode<int>(2);
+//     TreeNode<int> *n2 = new TreeNode<int>(3);
 
-    root->children.push_back(n1);
-    root->children.push_back(n2);
+//     root->children.push_back(n1);
+//     root->children.push_back(n2);
 
-    printTree(root);
-}
+//     printTree(root);
+// }
