@@ -6,8 +6,8 @@ dekho jo dono me common he and alos in order means LCS voh toh hatana hi nhi he 
 not common he string a me unhe delete kardo aur jo LCS ke alawa he b string me unhe delete
 kardo.
 for a->b
-minmum number of insertions = a.length - lcs
-minimum number of deletions  = b.length - lcs
+minmum number of insertions = b.length - lcs
+minimum number of deletions  = a.length - lcs
 
 Problem Statement
 Minimum number of deletions and insertions to transform one string into another

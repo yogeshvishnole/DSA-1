@@ -29,6 +29,7 @@ using namespace std;
 
 // This function will find the position of the pivot element
 // partition the elements around that into smaller and greater groups
+// This function is not optimal implementation see any another code
 int partition(int arr[], int start, int end)
 {
     int pivotPos = 0;
@@ -84,14 +85,14 @@ void quickSort(int arr[], int start, int end)
 int main(int argc, char **argv)
 {
     // quick sort demo
-    int arr2[] = {5, 9, 3, 7, 8, 4};
-    for (int i = 0; i < 5; i++)
+    int arr2[] = {3, 2, 2, 9, 5, 1};
+    for (int i = 0; i < 6; i++)
     {
         cout << arr2[i] << " ";
     }
     cout << endl;
-    quickSort(arr2, 0, 4);
-    for (int i = 0; i < 5; i++)
+    quickSort(arr2, 0, 5);
+    for (int i = 0; i < 6; i++)
     {
         cout << arr2[i] << " ";
     }
