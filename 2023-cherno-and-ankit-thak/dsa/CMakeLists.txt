@@ -3,5 +3,5 @@ project(test VERSION 0.1.0 LANGUAGES C CXX)
 
 # add_executable(dsa section-26-dynamic-programming/p28-matrix-chain-multiplication.cpp)
 # add_executable(dsa section-27-graphs/p11-cycle-detection-ug-using-dfs.cpp)
-add_executable(dsa section-27-graphs/p18-cycle-detection-ug-dfs.cpp)
+add_executable(dsa section-11-recursion/recursion-patterns/p8-combination-sum-2.pattern.cpp)
 
