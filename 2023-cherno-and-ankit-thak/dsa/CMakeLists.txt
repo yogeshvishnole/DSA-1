@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.5.0)
-project(test VERSION 0.1.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.10.0)
+project(DSA VERSION 0.1.0 LANGUAGES C CXX)
 
-# add_executable(dsa section-26-dynamic-programming/p28-matrix-chain-multiplication.cpp)
-# add_executable(dsa section-27-graphs/p11-cycle-detection-ug-using-dfs.cpp)
-add_executable(dsa section-11-recursion/recursion-patterns/p8-combination-sum-2.pattern.cpp)
+add_executable(DSA section-27-graphs/p26-topo-sort-dfs-iterative.cpp)
 
+include(CTest)
+enable_testing()
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
