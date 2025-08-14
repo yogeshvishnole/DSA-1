@@ -46,3 +46,9 @@ We are going to learn graphs into following 14 chapters, in each chapter we will
     a. Ford Fulkerson
     b. Edmonds Karp
 
+Some Graph Patterns -
+1. Multisource BFS, by storing levels along with node in queues using the pair.
+2. Matrix as graphs, 8 direction neighbours, 4 direction neigbours.
+3. DFS cycle detection.
+4. Dependency resolutions using topological sorting - very versatile.
+

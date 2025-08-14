@@ -26,9 +26,7 @@ Mark each neighbor as visited and enqueue them.
 Steps Example:
 For graph:
 
-mathematica
-Copy
-Edit
+
 A -- B -- D
 |    |
 C -- E

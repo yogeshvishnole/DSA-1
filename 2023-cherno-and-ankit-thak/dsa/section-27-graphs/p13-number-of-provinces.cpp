@@ -1,7 +1,7 @@
 /* 
 
 Pattern - Simple question, use graph traversal on all connected components.
-answer will be equal to number of connected components.abort
+answer will be equal to number of connected components.
 
 More learnings - 
 How to run bfs/dfs on a adjacency matrix and when index 0 represents the node 1 and so on,

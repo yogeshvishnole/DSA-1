@@ -12,7 +12,7 @@ vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc, int co
     q.push({sr, sc});
     // I mutated the same input variable but dont do it, always copy the input variable and make the
     // changes in copy it is a software engineering principle, never change the original copy of data
-    // otherwise you will corrupt the data, that you will have nothing to work with.
+    // otherwise you will corrupt the data, then you will have nothing to work with.
     image[sr][sc] = color;
 
     while (!q.empty())

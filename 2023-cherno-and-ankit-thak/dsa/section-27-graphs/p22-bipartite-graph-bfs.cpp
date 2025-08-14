@@ -2,7 +2,7 @@
 We have two colors, if we color the graph with this two colors in such a way that no
 two adjacent nodes have same color than the graph is called as the bipartite graph.
 
-A linear graph is always bipartite.alignas
+A linear graph is always bipartite.
 A graph with cycle is bipartite if number of nodes in cycel are even else
 it will not bipartite.
 
