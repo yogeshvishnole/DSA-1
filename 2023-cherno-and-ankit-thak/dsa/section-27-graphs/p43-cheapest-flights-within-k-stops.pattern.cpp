@@ -15,7 +15,7 @@ is breaking when I have two paths to dest node one is in less stops
 but higher dist and one is in more stops than K but with lesser dist.
 due to dijstra's nature the minimum value is overriding the distance
 for the dst node but that answer is not possible due to number of stops
-is becoming more than K stops, nut one thing is clear that on node with 
+is becoming more than K stops, note one thing is clear that on node with 
 minimum stops we are reaching first and we are reaching the dst first also
 from the path which is closer in terms of stops, so tweak is that we will
 store  the latestPath in queue as the nearer elements will reach first than
