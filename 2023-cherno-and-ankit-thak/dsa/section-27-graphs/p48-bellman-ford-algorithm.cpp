@@ -35,5 +35,88 @@ If you dont understood, read further.
 If not understood watch the striver video again, that may also not help
 think by yourself in very depth.
 
+Negative Path Cycle Detection -
+Now after (n-1)th iteration, do one more nth iteration if the distances also get
+decreased in the nth iteration means there is negative cycle in the graph,intution
+because shortest distance between two nodes can not have more than n-1 edges
+it is decreasing in nth iteration because of cycle of negative weight, think about
+it it is simple and easy-pizzy.
+
+NOTE :- Bellman Ford ALgorithm only works for directed graphs, if you have given
+an undirected graph then convert it to directed graph for applying the Bellman Ford
+algorithm.
 */
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<int> bellmanFord(int V, vector<vector<int>> &edges, int src)
+    {
+        const int INF = 1e8;
+        // lets first build the directed graph
+        vector<vector<pair<int, int>>> graph(V, vector<pair<int, int>>());
+
+        for (int i = 0; i < edges.size(); i++)
+        {
+            graph[edges[i][0]].push_back({edges[i][1], edges[i][2]});
+        }
+
+        vector<int> minDist(V, INF);
+
+        // assign minDist as 0 for the src
+        minDist[src] = 0;
+
+        // n-1 times relaxations of all the edges
+        for (int i = 0; i < V - 1; i++)
+        {
+            for (int j = 0; j < edges.size(); j++)
+            {
+                int newDist = minDist[edges[j][0]] == INF ? INF : minDist[edges[j][0]] + edges[j][2];
+                if (minDist[edges[j][1]] > newDist)
+                {
+                    minDist[edges[j][1]] = newDist;
+                }
+            }
+        }
+
+        for (int j = 0; j < edges.size(); j++)
+        {
+            int newDist = minDist[edges[j][0]] + edges[j][2];
+            if (minDist[edges[j][1]] > newDist)
+            {
+                if (minDist[edges[j][1]] == INF)
+                    continue;
+                vector<int>().swap(minDist);
+                minDist.push_back(-1);
+            }
+        }
+
+        return minDist;
+    }
+};
+
+int main(int argc, char *argv)
+{
+    Solution soln;
+    int V = 5;
+    vector<vector<int>> edges = {
+        {1, 3, 2},
+        {4, 3, -1},
+        {2, 4, 1},
+        {1, 2, 1},
+        {0, 1, 5}};
+    int src = 0;
+
+    vector<int> ans = soln.bellmanFord(V, edges, src);
+
+    for (auto el : ans)
+    {
+        cout << el << " ";
+    }
+
+    cout << endl;
+}

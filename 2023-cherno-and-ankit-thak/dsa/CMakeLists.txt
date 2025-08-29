@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(DSA VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(DSA section-27-graphs/p42-path-with-minimum-effort.cpp)
+add_executable(DSA section-27-graphs/p48-bellman-ford-algorithm.cpp)
 
 include(CTest)
 enable_testing()
