@@ -49,7 +49,11 @@ public:
             {
                 for (int j = 0; j < numOfNodes; j++)
                 {
-                    int newDist = (dist[i][via] < INF ? dist[i][via] : INF) + (dist[via][j] < INF ? dist[via][j] : INF);
+                    if (dist[i][via] == INF || dist[via][j] == INF)
+                    {
+                        continue;
+                    }
+                    int newDist = dist[i][via] + dist[via][j];
 
                     dist[i][j] = min(dist[i][j], newDist);
                 }
