@@ -1,4 +1,43 @@
 /*
+Functor -
+In your currently selected file, the functor is used here:
+priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>>> pq;
+
+Where is the functor?
+The functor in this line is greater<pair<int, pair<int, int>>>.
+
+What is a Functor in C++?
+A functor (function object) in C++ is any object that can be called as if it
+were a function, usually by overloading the operator().
+However, in the STL, functors are often used as custom comparators for
+containers like priority_queue, sort, etc.
+
+Example of a Functor (Custom Comparator):
+struct Compare {
+    bool operator()(const pair<int, int>& a, const pair<int, int>& b) const {
+        return a.first > b.first; // min-heap
+    }
+};
+priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> pq;
+
+STL Functors
+STL provides built-in functors like:
+
+std::greater<T>: Returns true if the first argument is
+greater than the second.
+std::less<T>: Returns true if the first argument is less
+than the second.
+In your code, greater<pair<int, pair<int, int>>> is used
+as the third template parameter to priority_queue, making it a min-heap (smallest element at the top).
+
+In Short
+Functor = object that acts like a function (overloads operator()).
+Used for custom logic in STL containers/algorithms.
+In your code, greater<pair<int, pair<int, int>>> is a functor that makes the 
+priority queue a min-heap for Prim's algorithm.
+*/
+
+/*
 
 Prims Algorithm -> Greedy approach(select the minimum weight edges, as we know that the node
 will be there in mst 100%)
